@@ -7,6 +7,8 @@ import { ImageSection } from "./storyblok/image-section";
 import { Space } from "./storyblok/space-section";
 import { CTA } from "./storyblok/cta-section";
 import { Columns } from "./storyblok/columns-section";
+import { ContactForm } from "./ui/form/contact-form";
+import { CardColumns } from "./storyblok/card-columns-section";
 
 storyblokInit({
   components: {
@@ -16,6 +18,8 @@ storyblokInit({
     space: Space,
     CTA: CTA,
     columns: Columns,
+    form: ContactForm,
+    card_columns: CardColumns
   },
 
   enableFallbackComponent: true,

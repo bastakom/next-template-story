@@ -66,7 +66,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
           </div>
           <div className="flex gap-2">
             {blok.buttons.map((item: LinkTypes) => (
-              <Button key={item._uid}>
+              <Button key={item._uid} variant={`${item.secondary_color ? "secondary" : "default"}`}>
                 <Link href="/">{item.title}</Link>
               </Button>
             ))}

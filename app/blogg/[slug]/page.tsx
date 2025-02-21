@@ -21,7 +21,7 @@ const page = async ({ params }: { params: Params }) => {
             className="object-cover"
           />
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-14">
           <h1 className="-mt-4">{data.name}</h1>
           <span className="">{render(data?.content?.content)}</span>
         </div>
