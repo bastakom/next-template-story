@@ -91,7 +91,11 @@
   }
 }
 
+/* Tabel styling */
 
+.display-left:last-of-type {
+  border: 2px solid red !important;
+}
 
 @layer base {
   * {
