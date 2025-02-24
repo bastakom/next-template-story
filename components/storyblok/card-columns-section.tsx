@@ -5,7 +5,6 @@ import Link from "next/link";
 import placeholder from "@/public/images/placeholder.jpg";
 
 export const CardColumns = ({ blok }: any) => {
-  console.log(blok);
   return (
     <div className="container-section mx-auto">
       <div

@@ -9,6 +9,8 @@ import { CTA } from "./storyblok/cta-section";
 import { Columns } from "./storyblok/columns-section";
 import { ContactForm } from "./ui/form/contact-form";
 import { CardColumns } from "./storyblok/card-columns-section";
+import { TableSection } from "./storyblok/table-section";
+import { TableColumnSection } from "./storyblok/table-column-section";
 
 storyblokInit({
   components: {
@@ -19,7 +21,9 @@ storyblokInit({
     CTA: CTA,
     columns: Columns,
     form: ContactForm,
-    card_columns: CardColumns
+    card_columns: CardColumns,
+    table: TableSection,
+    table_columns: TableColumnSection,
   },
 
   enableFallbackComponent: true,

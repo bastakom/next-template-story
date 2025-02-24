@@ -1,6 +1,7 @@
 $primary: #121212;
 $primary-text: #fff;
 $primary-hover: #303000;
+$forground: #f8f8f8;
 
 $secondary: #fff;
 $secondary-text: $primary;
@@ -71,4 +72,8 @@ a {
   background: $primary;
   color: white;
   border-radius: 29px;
+}
+
+.table-head {
+  background: $forground;
 }
