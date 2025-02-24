@@ -37,8 +37,8 @@ export const HeroSection = ({ blok }: HeroProps) => {
       className={`h-full w-full flex flex-col justify-center mx-auto`}
     >
       <div
-        className={`h-full relative ${
-          blok?.video ? "h-full" : blok.small_hero ? "min-h-[50vh]" : "min-h-[80vh]"
+        className={`relative ${
+          blok?.video ? "h-full" : blok.small_hero ? "h-[50vh] lg:min-h-[50vh]" : "h-full lg:min-h-[80vh]"
         } justify-center flex items-center ${
           blok.frame && "container-section mt-20"
         }`}
@@ -77,7 +77,7 @@ export const HeroSection = ({ blok }: HeroProps) => {
             autoPlay
             muted
             loop
-            className="max-h-[80vh] object-cover w-full"
+            className="h-[80vh] lg:max-h-[80vh] object-cover w-full"
           >
             <source src={blok.bg_image.filename || ""} />
           </video>
