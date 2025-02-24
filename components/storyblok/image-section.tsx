@@ -10,18 +10,18 @@ export const ImageSection = ({ blok }: any) => {
   return (
     <div
       {...storyblokEditable}
-      className={`container-section  ${blok.bg_color?.color && "p-14"}`}
+      className={`container-section  ${blok.bg_color?.color && "p-5 lg:p-14"}`}
       style={{ background: `${blok.bg_color?.color || ""}` }}
     >
-      <div className="h-[600px] grid gap-14 grid-cols-1 lg:grid-cols-2">
+      <div className="lg:h-[600px] grid gap-14 grid-cols-1 lg:grid-cols-2">
         <div
-          className={`w-full h-full relative ${blok.image_right && "order-1"}`}
+          className={`w-full h-[350px] lg:h-full relative ${blok.image_right && "order-1"}`}
         >
           <Image
             src={blok.image.filename || placeholder}
             alt={blok.title}
             fill
-            className={`object-cover ${blok.image_right ? "p-10 pr-0" : "p-10 pl-0"}`}
+            className={`object-cover ${blok.image_right ? "p-0 lg:p-10 pr-0" : "p-0 lg:p-10 pl-0"}`}
           />
         </div>
         <div

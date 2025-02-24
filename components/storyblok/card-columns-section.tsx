@@ -5,7 +5,6 @@ import Link from "next/link";
 import placeholder from "@/public/images/placeholder.jpg";
 
 export const CardColumns = ({ blok }: any) => {
-  console.log(blok);
   return (
     <div className="container-section mx-auto">
       <div
@@ -25,9 +24,9 @@ export const CardColumns = ({ blok }: any) => {
             key={item._uid}
             className={`${
               blok.columns === "1"
-                ? "flex flex-row-reverse items-center"
+                ? "flex flex-col gap-14 lg:gap-0 lg:flex-row-reverse items-center"
                 : "flex flex-col gap-14"
-            } border p-14 transition-all duration-300 hover:shadow-lg`}
+            } border p-5 lg:p-14 transition-all duration-300 hover:shadow-lg`}
           >
             <div className="w-full h-[300px] relative">
               <Image
