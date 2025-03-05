@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import placeholder from "@/public/images/placeholder.jpg";
 import { ArrowRight } from "lucide-react";
 import { render } from "storyblok-rich-text-react-renderer";
 
@@ -21,7 +20,7 @@ export const Card = ({ title, link, image, uuid, content }: CardProps) => {
     >
       <div className="w-full h-[300px] relative">
         <Image
-          src={image || placeholder}
+          src={image || ""}
           fill
           alt={title}
           className="object-cover "

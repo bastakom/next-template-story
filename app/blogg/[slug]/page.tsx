@@ -2,7 +2,6 @@ import { getBloggSlug } from "@/lib/actions/get-blogg-slug";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import placeholder from "@/public/images/placeholder.jpg";
 import { render } from "storyblok-rich-text-react-renderer";
 
 type Params = Promise<{ slug: string }>;
@@ -14,7 +13,7 @@ const page = async ({ params }: { params: Params }) => {
       <div className="flex flex-col gap-14">
         <div className="relative h-[400px]">
           <Image
-            src={data.content.image?.filename || placeholder}
+            src={data.content.image?.filename || ""}
             fill
             alt={data.name}
             quality={100}

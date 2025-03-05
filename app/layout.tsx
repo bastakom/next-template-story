@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const cachedFetch = (input: any, init?: any): Promise<Response> => {
   return fetch(input, {
     ...init,
-    cache: "no-cache",
+    cache: "only-if-cached",
   });
 };
 
