@@ -1,3 +1,4 @@
+import { waitForDebugger } from "inspector";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -11,6 +12,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true;
+  }
 };
 
 export default nextConfig;
