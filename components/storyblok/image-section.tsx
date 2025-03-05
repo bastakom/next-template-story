@@ -1,6 +1,5 @@
 import { storyblokEditable } from "@storyblok/react";
 import Image from "next/image";
-import placeholder from "@/public/images/placeholder.jpg";
 import { render } from "storyblok-rich-text-react-renderer";
 import { LinkTypes } from "@/types/IfLinkInterface";
 import Link from "next/link";
@@ -18,7 +17,7 @@ export const ImageSection = ({ blok }: any) => {
           className={`w-full h-[350px] lg:h-full relative ${blok.image_right && "order-1"}`}
         >
           <Image
-            src={blok.image.filename || placeholder}
+            src={blok.image.filename || ""}
             alt={blok.title}
             fill
             className={`object-cover ${blok.image_right ? "p-0 lg:p-10 pr-0" : "p-0 lg:p-10 pl-0"}`}

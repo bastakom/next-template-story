@@ -1,4 +1,3 @@
-import placeholder from "@/public/images/placeholder.jpg";
 import { LinkTypes } from "@/types/IfLinkInterface";
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -9,7 +8,7 @@ export const CTA = ({ blok }: any) => {
     <div className={`${blok.full_width ? "mt-10" : "container-section"}`}>
       <div className="h-[500px] w-full relative">
         <Image
-          src={blok.image?.filename || placeholder}
+          src={blok.image?.filename || ""}
           alt={blok.title}
           fill
           className="object-cover"

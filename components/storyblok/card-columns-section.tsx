@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import placeholder from "@/public/images/placeholder.jpg";
 
 export const CardColumns = ({ blok }: any) => {
   return (
@@ -30,7 +29,7 @@ export const CardColumns = ({ blok }: any) => {
           >
             <div className="w-full h-[300px] relative">
               <Image
-                src={item.image.filename || placeholder}
+                src={item.image.filename || ""}
                 fill
                 alt={item.title}
                 className="object-cover"

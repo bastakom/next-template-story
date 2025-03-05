@@ -8,9 +8,7 @@ export async function getBloggSlug(slug: string) {
 
   const client = getStoryblokApi();
 
-  const data = await client.get(`cdn/stories/blogg/${slug}`, sbParams, {
-    cache: "no-store",
-  });
+  const data = await client.get(`cdn/stories/blogg/${slug}`, sbParams);
 
   return data.data.story;
 }

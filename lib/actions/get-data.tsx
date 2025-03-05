@@ -7,9 +7,7 @@ export async function getData(slug: string) {
 
   const client = getStoryblokApi();
 
-  const data = await client.get(`cdn/stories/${slug}`, sbParams, {
-    cache: "no-store",
-  });
+  const data = await client.get(`cdn/stories/${slug}`, sbParams);
 
   return data.data.story;
 }
