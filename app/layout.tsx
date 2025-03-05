@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { StoryblokProvider } from "@/components/StoryblokProvider";
 import { apiPlugin, storyblokInit } from "@storyblok/react";
 import { Header } from "@/components/ui/header/header";
+import { Suspense } from "react";
+
 import "./globals.scss";
 import "./theme.scss";
 import "./fonts.scss";
@@ -33,14 +35,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <StoryblokProvider>
-      <html lang="sv">
-        <body>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </StoryblokProvider>
+    <Suspense fallback="Loading..">
+      <StoryblokProvider>
+        <html lang="sv">
+          <body>
+            <Header />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </StoryblokProvider>
+    </Suspense>
   );
 }
